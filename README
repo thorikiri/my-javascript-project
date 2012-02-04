@@ -13,7 +13,7 @@ window.location.hashが変わるhashchangeイベントを拾って処理する�
 
 
 ■ jquery.storage.js
-localStorageとsessionStorageを扱いますよ。
+localStorageとsessionStorageを扱いますよ。jqueryに依存する意味はあんまりないですけどね。
 ・暗号化
 ・有効期限
 ・JSONの取り扱い
