@@ -21,7 +21,6 @@
 					local.setItem(key, value);
 					if (option.expire) {
 						var date = new Date();
-						alert(date.getFullYear());
 						local.setItem(key + "_expire", getExpireDate(date, option.expire));
 					}
 				} else {
