@@ -1,17 +1,16 @@
 (function($) {
 	var local = localStorage;
 	var session = sessionStorage;
-	var defaultOption = {
-		type: null,
-		encripto: true,
-		expire: null
-	};
 	
 	$.localStorage = $.localStorage ? $.localStorage : (function() {
 		return {
+			defaultOption: {
+				type: null,
+				encripto: true
+			},
 			setItem: function(key, value, option) {
 				if (option) {
-					option = $.extend(defaultOption, option);
+					option = $.extend(this.defaultOption, option);
 					if (option.type == "json") {
 						value = JSON.stringify(value);
 					}
@@ -36,7 +35,7 @@
 					return value;
 				}
 				if (option) {
-					option = $.extend(defaultOption, option);
+					option = $.extend(this.defaultOption, option);
 					if (option.encripto) {
 						value = decode(value);
 					}
@@ -55,7 +54,7 @@
 			},
 			hasItem: function(key, option) {
 				var expire = local.getItem(key + "_expire");
-				if (!isExpired(expire)) {
+				if (option && option.expire && !isExpired(expire)) {
 					this.removeItem(key, option);
 					return false;
 				}
@@ -70,9 +69,13 @@
 	
 	$.sessionStorage = $.sessionStorage ? $.sessionStorage : (function() {
 		return {
+			defaultOption: {
+				type: null,
+				encripto: true
+			},
 			setItem: function(key, value, option) {
 				if (option) {
-					option = $.extend(defaultOption, option);
+					option = $.extend(this.defaultOption, option);
 					if (option.type == "json") {
 						value = JSON.stringify(value);
 					}
@@ -97,7 +100,7 @@
 					return value;
 				}
 				if (option) {
-					option = $.extend(defaultOption, option);
+					option = $.extend(this.defaultOption, option);
 					if (option.encripto) {
 						value = decode(value);
 					}
@@ -116,7 +119,7 @@
 			},
 			hasItem: function(key, option) {
 				var expire = session.getItem(key + "_expire");
-				if (!isExpired(expire)) {
+				if (option && option.expire && !isExpired(expire)) {
 					this.removeItem(key, option);
 					return false;
 				}
@@ -167,7 +170,7 @@
 			return false;
 		}
 		var date = new Date();
-		return date < expire;
+		return date < new Date(expire);
 	}
 	function encode(value) {
 		return btoa(unescape(encodeURIComponent(value)));
