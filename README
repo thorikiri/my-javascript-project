@@ -1,1 +1,22 @@
 Hello Github.
+
+こんにちは、はじめまして、thorikiriです。よろしく。
+GitとGithub練習用にjavascriptで作ってみたものを上げていますよ。
+特に意味はないです。
+
+今のところ、
+jquery.hashchange.js, jquery.storage.jsくらいです。
+
+■ jquery.hashchange.js
+window.location.hashが変わるhashchangeイベントを拾って処理するものです。
+
+
+
+■ jquery.storage.js
+localStorageとsessionStorageを扱いますよ。
+・暗号化
+・有効期限
+・JSONの取り扱い
+位が出来ます。
+
+
