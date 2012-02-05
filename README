@@ -5,12 +5,14 @@ GitとGithub練習用にjavascriptで作ってみたものを上げています�
 特に意味はないです。
 
 今のところ、
-jquery.hashchange.js, jquery.storage.jsくらいです。
+jquery.hashchange.js, jquery.storage.js, jquery.array.js くらいです。
 
 ■ jquery.hashchange.js
 window.location.hashが変わるhashchangeイベントを拾って処理するものです。
 
-
+■ jquery.array.js
+配列関係のユーティリティを追加しようかなと。
+・eachの反転バージョン。ただし、Objectのforeachの逆は使えません。
 
 ■ jquery.storage.js
 localStorageとsessionStorageを扱いますよ。jqueryに依存する意味はあんまりないですけどね。
