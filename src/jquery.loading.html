@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ローディングサンプル</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="./jquery.loading.js"></script>
+  <script type="text/javascript">
+    (function() {
+        $(function() {
+            // init
+            $("#floatingBarsG").loading("init", {"type": "floatingBarsG"});
+            $("#facebookG").loading("init", {"type": "facebookG"});
+            $("#circleG").loading("init", {"type": "circleG"});
+            $("#outer-barG").loading("init", {"type": "outer-barG"});
+            $("#circularG").loading("init", {"type": "circularG"});
+            $("#floatingCirclesG").loading("init", {"type": "floatingCirclesG"});
+            $("#circular3dG").loading("init", {"type": "circular3dG"});
+            $("#bowlG").loading("init", {"type": "bowlG"});
+
+            // onclick
+            $("#floatingBarsGButton").click(function() {
+                $("#floatingBarsG").loading("show");
+                setTimeout(function(){
+                    $("#floatingBarsG").loading("hide");
+                }, 3000);
+            });
+            $("#facebookGButton").click(function() {
+                $("#facebookG").loading("show");
+                setTimeout(function(){
+                    $("#facebookG").loading("hide");
+                }, 3000);
+            });
+            $("#circleGButton").click(function() {
+                $("#circleG").loading("show");
+                setTimeout(function(){
+                    $("#circleG").loading("hide");
+                }, 3000);
+            });
+            $("#outer-barGButton").click(function() {
+                $("#outer-barG").loading("show");
+                setTimeout(function(){
+                    $("#outer-barG").loading("hide");
+                }, 3000);
+            });
+            $("#circularGButton").click(function() {
+                $("#circularG").loading("show");
+                setTimeout(function(){
+                    $("#circularG").loading("hide");
+                }, 3000);
+            });
+            $("#floatingCirclesGButton").click(function() {
+                $("#floatingCirclesG").loading("show");
+                setTimeout(function(){
+                    $("#floatingCirclesG").loading("hide");
+                }, 3000);
+            });
+            $("#circular3dGButton").click(function() {
+                $("#circular3dG").loading("show");
+                setTimeout(function(){
+                    $("#circular3dG").loading("hide");
+                }, 3000);
+            });
+            $("#bowlGButton").click(function() {
+                $("#bowlG").loading("show");
+                setTimeout(function(){
+                    $("#bowlG").loading("hide");
+                }, 3000);
+            });
+        });
+    })();
+  </script>
+  <link rel="stylesheet" href="./jquery.loading.css"></link>
+  <style>
+    body {
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <button id="floatingBarsGButton">floatingBarsG</button>
+    <button id="facebookGButton">facebookG</button>
+    <button id="circleGButton">circleG</button>
+    <button id="outer-barGButton">outer-barG</button>
+    <button id="circularGButton">circularG</button>
+    <button id="floatingCirclesGButton">floatingCirclesG</button>
+    <button id="circular3dGButton">circular3dG</button>
+    <button id="bowlGButton">bowlG</button>
+  </div>
+  <div id="floatingBarsG"></div>
+  <div id="facebookG"></div>
+  <div id="circleG"></div>
+  <div id="outer-barG"></div>
+  <div id="circularG"></div>
+  <div id="floatingCirclesG"></div>
+  <div id="circular3dG"></div>
+  <div id="bowlG"></div>
+</body>
+</html>

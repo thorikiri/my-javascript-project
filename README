@@ -5,7 +5,7 @@ GitとGithub練習用にjavascriptで作ってみたものを上げています�
 特に意味はないです。
 
 今のところ、
-jquery.hashchange.js, jquery.storage.js, jquery.array.js くらいです。
+jquery.hashchange.js, jquery.storage.js, jquery.array.js, jquery.loading.js くらいです。
 
 ■ jquery.hashchange.js
 window.location.hashが変わるhashchangeイベントを拾って処理するものです。
@@ -21,4 +21,10 @@ localStorageとsessionStorageを扱いますよ。jqueryに依存する意味は
 ・JSONの取り扱い
 位が出来ます。
 
+■ jquery.loading.js
+nikesh.meでAjaxでのクルクルするアレが公開されていたので、jQueryプラグイン化しました。
+cssload.netでCSSを作ってCSSを作れます。
 
+　nikesh.me → http://www.nikesh.me/blog/2010/05/ajax-style-loading-animation-in-css3-no-images/
+　cssload.net → http://cssload.net/
+　
